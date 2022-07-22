@@ -1,0 +1,75 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+#root {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.App {
+  width: 800px;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.post {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 700px;
+  border: 2px solid gray;
+  border-radius: 5px;
+  padding: 10px;
+  &_margin {
+    margin-top: 20px;
+  }
+}
+
+.formGroup {
+  display: flex;
+  height: 200px;
+  width: 400px;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.formContainer {
+  display: flex;
+  justify-content: space-between;
+  width: 700px;
+}
+
+.button_margin {
+  margin-top: 20px;
+}
+
+.post__content {
+  word-break: break-all
+}
+
+
+.post-enter {
+  transform: translateX(-300px);
+}
+.post-enter-active {
+  transform: translateX(-0px);
+  transition: transform 500ms ease-in;
+}
+.post-exit {
+  transform: translateX(0px);
+
+}
+.post-exit-active {
+  transform: translateX(-300px);
+  transition: transform 500ms ease-in;
+
+}
