@@ -8,29 +8,31 @@ import {
   } from 'react-transition-group';
 
 const PostList = React.memo( function(props: any) {
-
+    let emptyList = "Сообщения не найдены";
     return (
     <div className="postList">
         <h1 style={{textAlign: 'center'}}>
-        {props.title}
+        {props.amountPosts ? props.title : emptyList}
         </h1>
-        
-        <div>
+    <div>
         <TransitionGroup className="todo-list">
-            {props.postList.map((post: PostItemInterface, index: number) =>
-             <CSSTransition
-             key={post.id}
-             timeout={500}
-             classNames="post"
-           >
-                <PostItem
-                number={index + 1}
-                post={post}
-                remove={props.removePost}/>
-            </CSSTransition>
-            )}
+
+                {props.postList.map((post: PostItemInterface, index: number) =>
+                <CSSTransition
+                key={post.id}
+                timeout={500}
+                classNames="post"
+              >
+                   <PostItem
+                   number={index + 1}
+                   post={post}
+                   remove={props.removePost}/>
+               </CSSTransition>
+               )}
+               
             </TransitionGroup>
         </div>
+          
     </div>
     )
 })

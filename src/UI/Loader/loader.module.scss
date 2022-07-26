@@ -1,0 +1,26 @@
+.loader {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    border: 2px dashed rgb(57, 163, 43);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    animation: rotate 1s infinite linear;
+}
+
+
+.itemDot-1 {
+    font-size: 40px;
+
+}
+
+@keyframes rotate {
+    from {
+        transform: rotate(0deg) scale(1);
+    }
+    to {
+        transform: rotate(360deg) scale(1.4);
+    }
+}
